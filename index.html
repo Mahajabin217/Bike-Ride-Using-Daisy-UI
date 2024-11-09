@@ -10,10 +10,381 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!---------- Tailwind Custom Classes ----------->
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'bike-primary': '#E76F51',
+                        'bike-primary-bg': 'rgba(231, 111, 81, 0.10)',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
+    <header class="md:container md:mx-auto">
+        <nav>
+            <div class="navbar">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li><a>Home</a></li>
+                            <li><a>Product</a></li>
+                            <li><a>Services</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <a class="btn  btn-ghost text-xl lg:text-4xl text-white">Bike <span class="text-bike-primary">
+                            Ride</span></a>
+                </div>
+                <div class="navbar-end hidden lg:flex">
+                    <ul class="menu menu-horizontal px-4">
+                        <li><a>Home</a></li>
+                        <li><a>Product</a></li>
+                        <li><a>Services</a></li>
+                        <li><a>Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end w-auto">
+                    <a class="btn bg-bike-primary text-white px-4py-2">Login</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <!--------- Slider or Carousel --------->
+
+    <div class="carousel w-full h-[550px] bg-slate-200">
+        <div id="slide1" class="carousel-item relative w-full">
+            <div class="flex flex-col lg:flex-row p-4 lg:p-24 gap-28">
+                <div class="space-y-7 flex-1">
+                    <h2 class="lg:text-6xl text-2xl font-bold text-black">
+                        The Comfort <span class="text-bike-primary">And <br> The Safety</span>
+                        You Desire
+                    </h2>
+                    <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, ullam!</p>
+                    <button class="btn bg-bike-primary text-white">Purchase</button>
+                </div>
+                <div class="flex-1">
+                    <img src="images/bike1.png" class="w-full" />
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+            <div class="flex flex-col lg:flex-row p-4 lg:p-24 gap-28">
+                <div class="space-y-7 flex-1">
+                    <h2 class="lg:text-6xl text-2xl font-bold text-black">
+                        The Comfort <span class="text-bike-primary">And <br>The Safety</span>
+                        You Desire
+                    </h2>
+                    <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, ullam!</p>
+                    <button class="btn bg-bike-primary text-white">Purchase</button>
+                </div>
+                <div class="flex-1">
+                    <img src="images/bike2.png" class="w-full" />
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+            <div class="flex flex-col lg:flex-row p-4 lg:p-24 gap-28">
+                <div class="space-y-7 flex-1">
+                    <h2 class="lg:text-6xl text-2xl font-bold text-black">
+                        The Comfort <span class="text-bike-primary">And <br> The Safety</span>
+                        You Desire
+                    </h2>
+                    <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, ullam!</p>
+                    <button class="btn bg-bike-primary text-white">Purchase</button>
+                </div>
+                <div class="flex-1">
+                    <img src="images/bike3.png" class="w-full" />
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+            <div class="flex flex-col lg:flex-row p-4 lg:p-24 gap-28">
+                <div class="space-y-7 flex-1">
+                    <h2 class="lg:text-6xl text-2xl font-bold text-black">
+                        The Comfort <span class="text-bike-primary">And <br> The Safety</span>
+                        You Desire
+                    </h2>
+                    <p class="text-black">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, ullam!</p>
+                    <button class="btn bg-bike-primary text-white">Purchase</button>
+                </div>
+                <div class="flex-1">
+                    <img src="images/bike4.png" class="w-full" />
+                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="md:container md:mx-auto">
+
+        <!---------- Our Latest News ----------->
+
+        <section class="my-24">
+            <h3 class="text-5xl font-bold text-center text-white">Our Latest News</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="my-24">
+                    <div class="card card-compact bg-base-100 shadow-xl bg-slate-200">
+                        <figure>
+                            <img src="images/latest1.png" alt="" class="w-full">
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title font-bold text-black">Bike-1</h2>
+                            <p class="text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, labore!
+                            </p>
+                            <div class="card-actions justify-left">
+                                <button class="btn bg-bike-primary text-white">Read More!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-24">
+                    <div class="card card-compact bg-base-100 shadow-xl bg-slate-200">
+                        <figure>
+                            <img src="images/latest2.png" alt="" class="w-full">
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title font-bold text-black">Bike-2</h2>
+                            <p class="text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, labore!
+                            </p>
+                            <div class="card-actions justify-left">
+                                <button class="btn bg-bike-primary text-white">Read More!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="my-24">
+                    <div class="card card-compact bg-base-100 shadow-xl bg-slate-200">
+                        <figure>
+                            <img src="images/latest3.png" alt="" class="w-full">
+                        </figure>
+                        <div class="card-body">
+                            <h2 class="card-title font-bold text-black">Bike-3</h2>
+                            <p class="text-black">Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, labore!
+                            </p>
+                            <div class="card-actions justify-left">
+                                <button class="btn bg-bike-primary text-white">Read More!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!----------- What Our Clients Said ----------->
+
+        <section class="my-24">
+            <h3 class="text-5xl font-bold mb-12 text-center text-white">
+                What Our Clients Said
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="card bg-base-100 p-9 shadow-xl bg-slate-200">
+                    <figure class="px-10 pt-10">
+                        <img src="images/user-1.png" alt="" class="w-36">
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title"></h2>
+                        <p class="text-black">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, culpa.
+                        </p>
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                checked="checked" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-xl font-semibold text-bike-primary">Miles Mike</h4>
+                            <p class="text-black">Banker</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 p-9 shadow-xl bg-slate-200">
+                    <figure class="px-10 pt-10">
+                        <img src="images/user-2.png" alt="" class="w-36">
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title"></h2>
+                        <p class="text-black">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, culpa.
+                        </p>
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                checked="checked" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-xl font-semibold text-bike-primary">Miles Mike</h4>
+                            <p class="text-black">Banker</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-base-100 p-9 shadow-xl bg-slate-200">
+                    <figure class="px-10 pt-10">
+                        <img src="images/user-3.png" alt="" class="w-36">
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title"></h2>
+                        <p class="text-black">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, culpa.
+                        </p>
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                checked="checked" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-xl font-semibold text-bike-primary">Miles Mike</h4>
+                            <p class="text-black">Banker</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!---------- FAQ ----------->
+
+        <section class="my-24 text-black">
+            <h3 class="text-5xl font-bold mb-12 text-center text-white">
+                Frequently Asked Questions!
+            </h3>
+
+            <div class="hero min-h-screen bg-slate-200">
+                <div class="hero-content flex-col lg:flex-row lg:gap-24">
+                    <img src="images/faq.png" class="max-w-sm rounded-lg shadow-2xl" />
+                    <div>
+                        <div class="collapse collapse-arrow bg-slate-200">
+                            <input type="radio" name="my-accordion-2" checked="checked" />
+                            <div class="collapse-title text-xl font-medium">What are the important things that i should
+                                know before riding a bike?
+                            </div>
+                            <div class="collapse-content">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga ab asperiores sequi
+                                    accusantium nostrum ex labore, dolore alias odio porro.</p>
+                            </div>
+                        </div>
+
+                        <div class="collapse collapse-arrow">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl font-medium">How can i tell if my helmet is old and i
+                                need a new one?
+                            </div>
+                            <div class="collapse-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae voluptate vitae,
+                                    similique fugiat modi aliquid quod omnis magni esse nemo.</p>
+                            </div>
+                        </div>
+
+                        <div class="collapse collapse-arrow bg-slate-200">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl font-medium">What type of helmet is safe for riding and
+                                why should i buy it?
+                            </div>
+                            <div class="collapse-content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maiores reiciendis
+                                    dolore voluptatum aliquid cumque quos fugit. Debitis, tempora veniam.</p>
+                            </div>
+                        </div>
+
+                        <div class="collapse collapse-arrow bg-slate-200">
+                            <input type="radio" name="my-accordion-2" />
+                            <div class="collapse-title text-xl font-medium">What rules should i follow while riding
+                                bike?
+                            </div>
+                            <div class="collapse-content">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi maiores reiciendis
+                                    dolore voluptatum aliquid cumque quos fugit. Debitis, tempora veniam.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!---------- Footer ---------->
+
+        <section class="my-24 text-black">
+            <footer class="footer footer-center bg-slate-200 p-10">
+                <aside>
+                    <h3 class=" text-xl font-bold">
+                        Bike Ride <br>
+                        Providing reliable tech since 1992
+                    </h3>
+                    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+                </aside>
+                <nav>
+                    <div class="grid grid-flow-col gap-4">
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                class="fill-current">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                class="fill-current">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                class="fill-current">
+                                <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+            </footer>
+        </section>
+    </main>
 </body>
 
 </html>
